@@ -2,7 +2,7 @@ import React from 'react';
 import '../assets/styles/header.css';
 import fcbLogo from '../assets/images/fcb_logo.png'; // Adjust the path as needed
 
-function Header() {
+function Header({ onThemeToggle, currentTheme }) {
   return (
     <header className="main-header">
       <div className="logo-container">
@@ -24,7 +24,13 @@ function Header() {
         <button type="button" aria-label="Search">🔍</button>
       </div>
 
-      <button className="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button 
+        className="theme-toggle" 
+        onClick={onThemeToggle}
+        aria-label={`Switch to ${currentTheme === 'light' ? 'dark' : 'light'} theme`}
+      >
+        {currentTheme === 'light' ? '🌙' : '☀️'}
+      </button>
     </header>
   );
 }
