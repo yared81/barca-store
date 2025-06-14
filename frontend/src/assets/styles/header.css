@@ -1,0 +1,11 @@
+.main-header {
+    background-color: var(--barca-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.5rem 1rem;  
+}
