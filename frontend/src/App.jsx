@@ -1,35 +1,28 @@
-import { useState, useEffect } from 'react'
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/header'
 import Footer from './components/footer'
+import ClubBanner from './components/banner'
 import Home from './pages/home'
+import Bestseller from './pages/bestseller'
 import './App.css'
 
 function App() {
-  const [theme, setTheme] = useState(() => {
-    // Check localStorage or system preference
-    const savedTheme = localStorage.getItem('theme')
-    return savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-  })
-
-  useEffect(() => {
-    // Update theme class on body
-    document.body.className = theme
-    // Save theme preference
-    localStorage.setItem('theme', theme)
-  }, [theme])
-
-  const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
-  }
-
   return (
-    <div className={`app ${theme}`}>
-      <Header onThemeToggle={toggleTheme} currentTheme={theme} />
-      <main className="main-content">
-        <Home />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/bestseller" element={<Bestseller />} />
+          </Routes>     
+          <ClubBanner />     
+        </main>
+        
+        <Footer />
+      </div>
+    </Router>
   )
 }
 

@@ -90,21 +90,6 @@
     justify-content: center;
 }
 
-.theme-toggle {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 0.4rem;
-    height: 32px;
-    width: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1rem;
-}
-
 @media (max-width: 1024px) {
     .main-header {
         padding: 0 1rem;

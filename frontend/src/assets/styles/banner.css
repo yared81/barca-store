@@ -1,0 +1,11 @@
+.club-banner {
+    background-color: var(--barca-blue);
+    color: #F5F5F5;
+    font-size: 12.99vw; /* scales with screen width */
+    font-weight: bold;
+    text-align: center;   
+    width: 100%;    
+}
+.club-banner:hover{
+    color: red;
+}

@@ -58,7 +58,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="club-banner">FC BARCELONA</section>
+      
     </main>
   );
 }

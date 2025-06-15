@@ -1,21 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/header.css';
 import fcbLogo from '../assets/images/fcb_logo.png'; // Adjust the path as needed
 
-function Header({ onThemeToggle, currentTheme }) {
+function Header() {
   return (
     <header className="main-header">
       <div className="logo-container">
-        <img src={fcbLogo} alt="FC Barcelona Logo" className="logo" />
+        <Link to="/">
+          <img src={fcbLogo} alt="FC Barcelona Logo" className="logo" />
+        </Link>
       </div>
 
       <nav className="main-nav">
         <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/bestseller">Bestseller</a></li>
-          <li><a href="/kits">Kits</a></li>
-          <li><a href="/training">Training</a></li>
-          <li><a href="/accessories">Accessories</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/bestseller">Bestseller</Link></li>
+          <li><Link to="/kits">Kits</Link></li>
+          <li><Link to="/training">Training</Link></li>
+          <li><Link to="/accessories">Accessories</Link></li>
         </ul>
       </nav>
 
@@ -23,14 +26,6 @@ function Header({ onThemeToggle, currentTheme }) {
         <input type="search" placeholder="Search products..." aria-label="Search products" />
         <button type="button" aria-label="Search">🔍</button>
       </div>
-
-      <button 
-        className="theme-toggle" 
-        onClick={onThemeToggle}
-        aria-label={`Switch to ${currentTheme === 'light' ? 'dark' : 'light'} theme`}
-      >
-        {currentTheme === 'light' ? '🌙' : '☀️'}
-      </button>
     </header>
   );
 }
