@@ -17,9 +17,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/bestseller" element={<Bestseller />} />
           </Routes>     
-          <ClubBanner />     
+            
         </main>
-        
+        <ClubBanner />  
         <Footer />
       </div>
     </Router>
