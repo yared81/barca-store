@@ -5,6 +5,7 @@ import Footer from './components/footer'
 import ClubBanner from './components/banner'
 import Home from './pages/home'
 import Bestseller from './pages/bestseller'
+import Training from './pages/training'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/bestseller" element={<Bestseller />} />
+            <Route path="/training" element={<Training />} />
           </Routes>     
             
         </main>
