@@ -68,14 +68,4 @@
     margin-bottom: 1rem;
     font-size: 2rem;
 }
-
-.club-banner {
-    background-color: var(--barca-red);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 3rem;
-    width: 100%;
-}
+ 

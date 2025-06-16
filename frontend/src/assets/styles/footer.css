@@ -2,9 +2,7 @@
 .main-footer {
     background-color: var(--barca-blue);
     color: var(--white);
-    padding: 3rem 0 1rem;
-    margin-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 0 1rem;     
     width: 100%;
 }
 
