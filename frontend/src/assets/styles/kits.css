@@ -1,0 +1,64 @@
+.kits {
+    background-image: url("../images/kits.jpg");
+    height: calc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--header-height));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-left: 5vw;
+    color: #eee;
+}
+
+.kits::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.kits h2 {
+    position: relative;
+    z-index: 1;
+    color: #F5F5F5;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.kits .main_shopnow {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .kits {
+        height: calc(100vh - 50px);
+        margin-top: 50px;
+        padding-left: 3vw;
+    }
+
+    .kits h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .kits {
+        height: calc(100vh - 40px);
+        margin-top: 40px;
+        padding-left: 2vw;
+    }
+
+    .kits h2 {
+        font-size: 1.5rem;
+    }
+}
