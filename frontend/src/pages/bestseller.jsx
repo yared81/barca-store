@@ -21,6 +21,7 @@ function Bestseller() {
     { title: "Official Match Ball", price: "1850", image: "images/ball.jpg", alt: "Official Match Ball", category: "accessories" },
   ];
 
+  
   return (
     <main>
       <section className="bestseller">
